@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<div class="cards-container">
+    <div class="expandable-container">
+        <img src="images/image1.png" alt="">
+    </div>
+    <div class="expandable-container">
+        <img src="images/image2.png" alt="">
+    </div>
+    <div class="expandable-container">
+        <img src="images/image3.png" alt="">
+    </div>
+    <div class="expandable-container">
+        <img src="images/image4.png" alt="">
+    </div>
+    <div class="expandable-container">
+        <img src="images/image5.png" alt="">
+    </div>
+</div>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #070F2B;
+        /*here min height and min-width make the body to occupy the entire screen port*/
+        min-height: 100vh;
+        min-width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards-container{
+        height: 500px;
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+    .expandable-container{
+        height: 100%;
+        flex: 1;
+        transition: all 0.4s;
+    }
+    .expandable-container img{
+        display: block;
+        max-width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        object-fit: cover;
+        transition: all 0.4s;
+    }
+    .expandable-container:nth-child(odd){
+        translate: 0 -30px;
+    }    
+    .expandable-container:nth-child(odd){
+        translate: 0 30px;
+    }
+
+    .expandable-container img:not(:hover){
+        filter: grayscale();
+    }
+    .expandable-container:hover{
+        flex: 4;
+    }
+
+</style>
+
+</html>
